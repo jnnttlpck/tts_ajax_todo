@@ -1,0 +1,5 @@
+<li id="<%= @task.id %>">
+  <%= @task.description %>
+  <strong>Deadline: </strong><%= @task.deadline %><br>
+  <%= link_to "donezo", @task, method: 'delete', remote: true %>
+</li>

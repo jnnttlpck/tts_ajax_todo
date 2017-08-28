@@ -1,0 +1,13 @@
+<p id="notice"><%= notice %></p>
+<h1>Tasks</h1>
+<%= render 'form' %>
+<ul>
+  <% @tasks.each do |task| %>
+    <li id="<%= task.id %>">
+      <%= task.description %><br>
+      <strong>Deadline: </strong><%= task.deadline %><br>
+      <!-- Add `remote: true` to the line below -->
+      <%= link_to "done", task_path(task), method: 'delete', remote: true %>
+    </li>
+  <% end %>
+</ul>
